@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+include /usr/share/quilt/quilt.make
+
+build: patch build-stamp
+build-stamp:
+	dh build --before configure
+	autoreconf -fvi
+	dh build --remaining
+	touch $@
+
+clean: unpatch
+	dh clean 
+	rm -f config.guess config.sub ltmain.sh
+
+install: build
+	dh install --until dh_auto_install
+	pod2man --section=3 ev.pod > debian/tmp/usr/share/man/man3/ev.3
+	dh install --remaining
+
+binary-arch: install
+	dh binary-arch
+
+binary: binary-arch binary-indep
