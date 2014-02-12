@@ -1,3 +1,25 @@
+libev (1:4.11-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #657080)
+  * Taking over package maintenance. Adding DM-Upload-Allowed: yes.
+  * Bump Standards-Version to 3.9.2
+  * Removed patch applied to master branch, applied upstream. (Closes: #643186)
+  * debian/rules: remove unneeded overrides :
+    + Makefile has a rule for ev.3: ev.pod and calls pod2man when needed.
+    + Use dh-autoreconf
+  * debian/control: add Vcs-* fields, move git repository to collab-maint.
+  * debian/copyright: convert to DEP-5 format.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 11 Feb 2012 02:00:25 +0100
+
+libev (1:4.04-1) unstable; urgency=low
+
+  * New upstream release.
+    - API/ABI bump from libev3 to libev4.
+  * Convert packaging to git.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Mon, 21 Feb 2011 18:40:13 -0500
+
 libev (1:3.9-1) unstable; urgency=low
 
   * New upstream release.
