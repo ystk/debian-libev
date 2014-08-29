@@ -1,3 +1,31 @@
+libev (1:4.15-3) unstable; urgency=low
+
+  * Priority: optional except on development packages
+  * dh9 hardening and multiarch
+  * Patch configure.ac for automake >= 1.14 support
+  * dh-autoreconf is back, now working nicely
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 10 Sep 2013 00:32:58 +0200
+
+libev (1:4.15-2) unstable; urgency=low
+
+  * Upload to unstable 
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 31 Aug 2013 00:25:23 +0200
+
+libev (1:4.15-1) experimental; urgency=low
+
+  * New upstream release. (Closes: #613116)
+  * Remove obsolete DMUA field.
+  * Standards-Version 3.9.4 compliant.
+  * debian/libev4.symbols: add three new symbols.
+  * debian/rules:
+    + fix hardening
+    + no longer needed to autoreconf.
+  * No longer build-depend on dh-autoreconf.
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 01 May 2013 01:01:54 +0200
+
 libev (1:4.11-1) unstable; urgency=low
 
   * New upstream release. (Closes: #657080)
